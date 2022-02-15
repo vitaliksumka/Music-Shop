@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/enterNameField"
+        android:layout_width="383dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:inputType="textPersonName"
+        android:hint="Your name"
+        android:textColor="#B8B7B7" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="380dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:layout_below="@id/enterNameField"
+        android:layout_marginTop="11dp"
+        app:srcCompat="@drawable/task5"/>
+
+    <TextView
+        android:id="@+id/sale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-105dp"
+        android:fontFamily="@font/alef_bold"
+        android:rotation="-10"
+        android:text="Sale -30%"
+        android:textColor="#f56c03"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView1"
+        android:layout_alignRight="@id/imageView1"
+        android:fontFamily="@font/arimo_bold"
+        android:text="Select Item"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="385dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/textView2"
+        android:layout_alignRight="@id/textView2"
+        android:layout_marginTop="-13dp"
+        android:layout_marginRight="-13dp"
+        android:layout_marginBottom="-2dp" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinner"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="-15dp"
+        app:srcCompat="@drawable/faine" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="@font/arimo_bold"
+        android:text="Order Price"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="72dp"
+        android:fontFamily="@font/arimo_bold"
+        android:text="Quantify"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/totalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/arimo_bold"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textDollar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/totalPrice"
+        android:fontFamily="@font/arimo_bold"
+        android:text="грн"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonMinus"
+        android:onClick="minusButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/textView4"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="130dp"
+        android:fontFamily="@font/arimo_bold"
+        android:text="-"
+        android:textSize="20sp"
+        app:backgroundTint="#733101" />
+
+    <TextView
+        android:id="@+id/numberInTheCenterButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView4"
+        android:layout_toLeftOf="@id/buttonPlus"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="17dp"
+        android:fontFamily="@font/arimo_bold"
+        android:text="0"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/buttonPlus"
+        android:onClick="methodPlus"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@id/textView4"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="30dp"
+        android:fontFamily="@font/arimo_bold"
+        android:text="+"
+        android:textSize="20sp"
+        app:backgroundTint="#733101" />
+
+    <Button
+        android:id="@+id/buttonAddToCart"
+        android:onClick="addToCart"
+        android:layout_width="380dp"
+        android:layout_height="55dp"
+
+
+        android:layout_below="@id/buttonPlus"
+
+        android:text="ADD TO CART"
+        android:fontFamily="@font/arimo_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:backgroundTint="#733101" />
+
+</RelativeLayout>
